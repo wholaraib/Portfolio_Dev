@@ -1,0 +1,397 @@
+/*-----------------------------------*\
+  #main.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2022 codewithsadee
+ */
+
+/**
+ * TABLE OF CONTENT
+ *
+ * COMPONENTS
+ * Btn............................Buttons style
+ * Slider.........................Slider style
+ * Card...........................Cards style
+ *
+ * MAIN CONTENT
+ * Header.........................Modify header style
+ * Hero...........................Hero styles
+ * About..........................About style
+ * Skills.........................Skills style
+ * Cta............................Cta style
+ * Process.........................Process styles
+ * Activity.......................Activity styles
+ * Media queries..................Responsive for all devices
+ */
+
+
+
+
+
+/*-----------------------------------*\
+  #COMPONENTS
+\*-----------------------------------*/
+
+@import url("./components/btn.css");
+@import url("./components/slider.css");
+@import url("./components/card.css");
+
+
+
+
+
+/*-----------------------------------*\
+  #HEADER
+\*-----------------------------------*/
+
+.header { background-color: transparent; }
+
+.header.active { background-color: var(--white); }
+
+
+
+
+
+/*-----------------------------------*\
+  #HERO
+\*-----------------------------------*/
+
+.hero {
+  position: relative;
+  background-color: var(--maximum-yellow-red_a10);
+  padding-block-start: calc(var(--section-padding) + 60px);
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  bottom: 70%;
+  right: -75%;
+  background-color: var(--maximum-yellow-red_a40);
+  transform: rotate(-45deg);
+  border-radius: var(--radius-50);
+  z-index: -1;
+}
+
+.hero .container {
+  display: grid;
+  gap: 70px;
+}
+
+.hero-subtitle {
+  color: var(--jet);
+  text-transform: uppercase;
+  font-weight: var(--fw-600);
+  letter-spacing: 3px;
+  margin-block-end: 20px;
+}
+
+.hero-text { margin-block: 25px; }
+
+.hero .btn { margin-inline: auto; }
+
+.hero-banner {
+  max-width: max-content;
+  margin-inline: auto;
+}
+
+.philosophy-section {
+  padding: 23px 16px;
+  text-align: center;
+  background: #fff;
+}
+
+.philosophy-section .label {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: #ff6a1a;
+  margin-bottom: 12px;
+}
+
+.philosophy-section h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #3a3a3a;
+}
+
+.process-section {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.process-card {
+  padding: 32px 24px;
+  border: 2px solid #2f2f2f;
+  background: #fff;
+  text-align: left;
+  position: relative;
+}
+
+.process-step {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ff6a1a;
+  letter-spacing: 0.15em;
+}
+
+.process-card h3 {
+  font-size: 22px;
+  margin: 12px 0;
+  color: #2f2f2f;
+}
+
+.process-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/*-----------------------------------*\
+  #ABOUT
+\*-----------------------------------*/
+
+.about .container {
+  display: grid;
+  gap: 50px;
+}
+
+.about .section-text { margin-block: 25px 16px; }
+
+.about-list {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.about-list .list-text {
+  color: var(--jet);
+  font-weight: var(--fw-500);
+}
+
+.about-list .strong {
+  color: var(--orange-red);
+  display: block;
+}
+
+.about .wrapper {
+  margin-block-start: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px 25px;
+}
+
+/*-----------------------------------*\
+  #SKILLS
+\*-----------------------------------*/
+
+.skill { padding-block-end: 0; }
+
+.skill .container,
+.skill-list { display: grid; }
+
+.skill .container { gap: 50px; }
+
+.skill-list {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.skill .card ion-icon { font-size: 3rem; }
+
+.skill .card .card-title {
+  color: var(--jet);
+  font-size: 1.6rem;
+  font-weight: var(--fw-500);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: #fff9ef;
+}
+
+.logo-text {
+  font-family: "Inter", "Montserrat", system-ui, sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #2f2f2f;
+  line-height: 1;
+}
+.section-title{
+  text-align: center;
+  font-size: 32px;
+}
+/*-----------------------------------*\
+  #ACTIVITY
+\*-----------------------------------*/
+
+.activity-section {
+  padding: 80px 0;
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.heatmap {
+  background: #fff;
+  padding: 24px;
+}
+
+.heatmap h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.heatmap img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*-----------------------------------*\
+  #CTA
+\*-----------------------------------*/
+
+.cta {
+  background-color: var(--jet);
+  text-align: center;
+  padding-block: 46px 50px;
+}
+
+.cta .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.cta .title-lg {
+  color: var(--white);
+  font-weight: var(--fw-500);
+}
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+ * responsive for large than 575px screen
+ */
+
+@media (min-width: 575px) {
+
+  /**
+   * ABOUT & SKILL
+   */
+
+  .about-banner,
+  .skill-banner {
+    max-width: max-content;
+    margin-inline: auto;
+  }
+
+  /**
+   * CTA
+   */
+
+  .cta .container { justify-content: space-between; }
+
+}
+
+/**
+ * responsive for large than 768px screen
+ */
+
+@media (min-width: 768px) {
+
+  /**
+   * HERO
+   */
+
+  .hero-text { --fs-18: 2rem; }
+
+  .hero::after {
+    top: -20%;
+    bottom: 50%;
+    left: 48%;
+    right: -15%;
+  }
+
+}
+
+/**
+ * responsive for large than 992px screen
+ */
+
+@media (min-width: 992px) {
+
+  /**
+   * HERO, ABOUT, SKILL
+   */
+
+  :is(.hero, .about, .skill) .container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  /**
+   * HERO
+   */
+
+  .hero { text-align: left; }
+
+  .hero .btn { margin-inline: 0; }
+
+  /**
+   * SKILL
+   */
+
+  .skill .container { align-items: flex-start; }
+
+}
+
+/**
+ * responsive for large than 1200px screen
+ */
+
+@media (min-width: 1200px) {
+
+  /**
+   * ABOUT
+   */
+
+  .about-list { gap: 40px; }
+
+}

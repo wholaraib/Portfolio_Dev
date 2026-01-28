@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 
+    - primary meta tags
+  -->
+    <title>Laraib — Software Developer based in Bengaluru, India</title>
+    <meta
+      name="title"
+      content="Laraib — Software Developer based in Bengaluru, India"
+      ,
+    />
+    <meta
+      name="description"
+      content="Software developer based in Bengaluru, India, focused on modern web applications, performance, and clean user experiences."
+      ,
+    />
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/require.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" href="./assets/images/hero-banner.png" />
+  </head>
+
+  <body>
+    <!-- 
+    - #PRELOADER
+  -->
+
+    <div class="preloader" data-preloader>
+      <div class="preloader-circle"></div>
+    </div>
+
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <a href="#" class="logo">
+          <div class="header-left">
+            <div class="logo-icon">
+              <img src="./favicon.svg" alt="Laraib home" />
+            </div>
+            <div class="logo-text">LARAIB</div>
+          </div>
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="#" class="label-lg navbar-link has-after active">Home</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="./service.html" class="label-lg navbar-link has-after"
+                >Services</a
+              >
+            </li>
+
+            <li class="navbar-item">
+              <a href="./portfolio.html" class="label-lg navbar-link has-after"
+                >Portfolio</a
+              >
+            </li>
+
+            <li class="navbar-item">
+              <a href="./contact.html" class="label-lg navbar-link has-after"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <a href="./contact.html" class="btn btn-primary">Contact Now</a>
+
+        <button class="nav-toggle-btn" aria-label="menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- 
+        - #HERO
+      -->
+
+        <section class="section hero" aria-label="home">
+          <div class="container">
+            <div class="hero-content">
+              <p class="hero-subtitle">👋, My name is Laraib</p>
+
+              <h1 class="headline-lg">I'm a Developer</h1>
+
+              <p class="hero-text body-md">Based in Bengaluru, India.</p>
+
+              <a href="#" class="btn btn-primary">Let's Start</a>
+            </div>
+
+            <figure class="hero-banner">
+              <img
+                src="./assets/images/profile-pic.png"
+                width="480"
+                height="545"
+                alt="Laraib, the boy, dressed in a red hoodie with a smile on his face"
+              />
+            </figure>
+          </div>
+        </section>
+
+        <!-- 
+        - #ABOUT
+      -->
+        <section class="philosophy-section">
+          <p class="label">MY APPROACH</p>
+          <h3>Clarity over cleverness.</h3>
+        </section>
+
+        <section class="section about" aria-label="about me">
+          <div class="container">
+            <figure class="about-banner">
+              <img
+                src="./assets/images/about-banner.png"
+                width="580"
+                height="554"
+                loading="lazy"
+                alt="Laraib, front-end developer, smiling and wearing a red hoodie"
+                class="w-100"
+              />
+            </figure>
+
+            <div class="about-content">
+              <h2 class="title-lg">
+                I’m a Software Developer focused on building reliable,
+                user-centered digital experiences.
+              </h2>
+
+              <p class="body-md section-text">
+                I’m Laraib, a software developer based in Bengaluru, India. I
+                enjoy solving problems and turning ideas into well-structured,
+                maintainable applications. I care about clean code, thoughtful
+                design, and building systems that are efficient and easy to use.
+                I’m always eager to learn new technologies, strengthen my
+                fundamentals, and collaborate on meaningful projects.
+              </p>
+
+              <ul class="about-list">
+                <li>
+                  <p class="list-text">
+                    <strong class="strong title-md">10+</strong> Projects Built
+                  </p>
+                </li>
+
+                <li>
+                  <p class="list-text">
+                    <strong class="strong title-md">1+</strong> Years of
+                    Learning & Practice
+                  </p>
+                </li>
+              </ul>
+
+              <div class="wrapper">
+                <a href="./contact.html" class="btn btn-primary">Contact Me</a>
+
+                <a href="./portfolio.html" class="btn btn-secondary"
+                  >View Portfolio</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 
+        - #SKILL
+      -->
+
+        <section class="section skill" aria-labelledby="skill-label">
+          <div class="container">
+            <div class="skill-content">
+              <h2 class="section-title headline-md" id="skill-label">
+                My Skills
+              </h2>
+
+              <ul class="skill-list">
+                <li>
+                  <div
+                    class="card card-sm"
+                    style="background-color: hsl(177, 39%, 72%)"
+                  >
+                    <div class="card-media">
+                      <ion-icon name="logo-html5"></ion-icon>
+                    </div>
+
+                    <h2 class="card-title">HTML</h2>
+                  </div>
+                </li>
+
+                <li>
+                  <div
+                    class="card card-sm"
+                    style="background-color: hsl(41, 99%, 64%)"
+                  >
+                    <div class="card-media">
+                      <ion-icon name="logo-css3"></ion-icon>
+                    </div>
+
+                    <h2 class="card-title">CSS</h2>
+                  </div>
+                </li>
+
+                <li>
+                  <div
+                    class="card card-sm"
+                    style="background-color: hsl(19, 97%, 85%)"
+                  >
+                    <div class="card-media">
+                      <ion-icon name="logo-react"></ion-icon>
+                    </div>
+
+                    <h2 class="card-title">React JS</h2>
+                  </div>
+                </li>
+
+                <li>
+                  <div
+                    class="card card-sm"
+                    style="background-color: hsl(221, 100%, 79%)"
+                  >
+                    <div class="card-media">
+                      <ion-icon name="logo-angular"></ion-icon>
+                    </div>
+
+                    <h2 class="card-title">Angular</h2>
+                  </div>
+                </li>
+
+                <li>
+                  <div
+                    class="card card-sm"
+                    style="background-color: hsl(76, 39%, 72%)"
+                  >
+                    <div class="card-media">
+                      <ion-icon name="logo-apple"></ion-icon>
+                    </div>
+
+                    <h2 class="card-title">iOs App</h2>
+                  </div>
+                </li>
+
+                <li>
+                  <div
+                    class="card card-sm"
+                    style="background-color: hsl(245, 100%, 90%)"
+                  >
+                    <div class="card-media">
+                      <ion-icon name="logo-android"></ion-icon>
+                    </div>
+
+                    <h2 class="card-title">App Dev</h2>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <figure class="skill-banner">
+              <img
+                src="./assets/images/skill-banner.png"
+                width="581"
+                height="657"
+                loading="lazy"
+                alt="Laraib, the boy, dressed in a red hoodie with a smile on his face"
+                class="w-100"
+              />
+            </figure>
+          </div>
+        </section>
+
+        <!-- 
+        - #CTA
+      -->
+
+        <section class="cta">
+          <div class="container">
+            <h2 class="title-lg">Intrested working with me?</h2>
+
+            <a href="./contact.html" class="btn btn-tertiary">Contact Now</a>
+          </div>
+        </section>
+
+        <section class="process-section">
+          <h2 class="section-title">My Process</h2>
+
+          <div class="process-grid">
+            <div class="process-card">
+              <span class="process-step">01</span>
+              <h3>Understand</h3>
+              <p>
+                I start by understanding the goal, users, and requirements to
+                make sure we build the right thing.
+              </p>
+            </div>
+
+            <div class="process-card">
+              <span class="process-step">02</span>
+              <h3>Design</h3>
+              <p>
+                I focus on clean layouts, usability, and responsiveness before
+                writing any code.
+              </p>
+            </div>
+
+            <div class="process-card">
+              <span class="process-step">03</span>
+              <h3>Build</h3>
+              <p>
+                I write clean, readable, and scalable front-end code using
+                modern tools and best practices.
+              </p>
+            </div>
+
+            <div class="process-card">
+              <span class="process-step">04</span>
+              <h3>Refine</h3>
+              <p>
+                I polish the UI, improve performance, and ensure the experience
+                feels smooth and intuitive.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="activity-section">
+          <div class="container">
+            <h2 class="section-title">Activity</h2>
+
+            <div class="activity-grid">
+              <div class="heatmap">
+                <h3>GitHub Contributions</h3>
+                <img
+                  src="https://ghchart.rshah.org/wholaraib"
+                  alt="GitHub contribution heatmap"
+                />
+              </div>
+
+              <div class="heatmap">
+                <h3>LeetCode Activity</h3>
+                <img
+                  src="https://leetcard.jacoblin.cool/_laraib?theme=light&font=Karma"
+                  alt="LeetCode activity heatmap"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer">
+      <div class="container">
+        <ul class="social-list">
+          <li>
+            <a
+              href="www.github.com/wholaraib"
+              class="social-link"
+              target="_blank"
+            >
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.instagram.com/laraiiibbbb"
+              class="social-link"
+              target="_blank"
+            >
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.linkedin.com/in/mohammad-laraib-58468a1b8/"
+              class="social-link"
+              target="_blank"
+            >
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+        <p class="text-center">&copy; 2026 copyright all right reserved</p>
+      </div>
+    </footer>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- 
+    - ionicon
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
