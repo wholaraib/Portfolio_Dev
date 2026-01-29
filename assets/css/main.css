@@ -25,10 +25,6 @@
  * Media queries..................Responsive for all devices
  */
 
-
-
-
-
 /*-----------------------------------*\
   #COMPONENTS
 \*-----------------------------------*/
@@ -37,21 +33,17 @@
 @import url("./components/slider.css");
 @import url("./components/card.css");
 
-
-
-
-
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
 
-.header { background-color: transparent; }
+.header {
+  background-color: transparent;
+}
 
-.header.active { background-color: var(--white); }
-
-
-
-
+.header.active {
+  background-color: var(--white);
+}
 
 /*-----------------------------------*\
   #HERO
@@ -91,9 +83,13 @@
   margin-block-end: 20px;
 }
 
-.hero-text { margin-block: 25px; }
+.hero-text {
+  margin-block: 25px;
+}
 
-.hero .btn { margin-inline: auto; }
+.hero .btn {
+  margin-inline: auto;
+}
 
 .hero-banner {
   max-width: max-content;
@@ -169,7 +165,9 @@
   gap: 50px;
 }
 
-.about .section-text { margin-block: 25px 16px; }
+.about .section-text {
+  margin-block: 25px 16px;
+}
 
 .about-list {
   display: flex;
@@ -199,24 +197,90 @@
   #SKILLS
 \*-----------------------------------*/
 
-.skill { padding-block-end: 0; }
+.skill {
+  padding-block-end: var(--section-padding);
+}
 
-.skill .container,
-.skill-list { display: grid; }
-
-.skill .container { gap: 50px; }
+.skill-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
 .skill-list {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
 }
 
-.skill .card ion-icon { font-size: 3rem; }
+.skill .card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.skill .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.696);
+}
+
+.skill .card ion-icon {
+  font-size: 3rem;
+}
 
 .skill .card .card-title {
   color: var(--jet);
   font-size: 1.6rem;
   font-weight: var(--fw-500);
+  margin-bottom: auto;
+}
+
+/* Skill Progress Bar */
+.skill-progress {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  width: var(--proficiency, 0%);
+  transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s ease;
+}
+
+.skill .card:hover .progress-bar {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.skill .card:hover .progress-bar::after {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.proficiency-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .header-left {
@@ -235,7 +299,7 @@
   color: #2f2f2f;
   line-height: 1;
 }
-.section-title{
+.section-title {
   text-align: center;
   font-size: 32px;
 }
@@ -270,6 +334,10 @@
   display: block;
   max-width: 100%;
   margin: 0 auto;
+}
+
+.icon-big {
+  font-size: 30px; /* try 24px, 32px, 48px, etc */
 }
 
 /* Responsive */
@@ -311,7 +379,6 @@
  */
 
 @media (min-width: 575px) {
-
   /**
    * ABOUT & SKILL
    */
@@ -326,8 +393,9 @@
    * CTA
    */
 
-  .cta .container { justify-content: space-between; }
-
+  .cta .container {
+    justify-content: space-between;
+  }
 }
 
 /**
@@ -335,12 +403,13 @@
  */
 
 @media (min-width: 768px) {
-
   /**
    * HERO
    */
 
-  .hero-text { --fs-18: 2rem; }
+  .hero-text {
+    --fs-18: 2rem;
+  }
 
   .hero::after {
     top: -20%;
@@ -348,7 +417,6 @@
     left: 48%;
     right: -15%;
   }
-
 }
 
 /**
@@ -356,12 +424,11 @@
  */
 
 @media (min-width: 992px) {
-
   /**
-   * HERO, ABOUT, SKILL
+   * HERO, ABOUT
    */
 
-  :is(.hero, .about, .skill) .container {
+  :is(.hero, .about) .container {
     grid-template-columns: 1fr 1fr;
     align-items: center;
   }
@@ -370,16 +437,13 @@
    * HERO
    */
 
-  .hero { text-align: left; }
+  .hero {
+    text-align: left;
+  }
 
-  .hero .btn { margin-inline: 0; }
-
-  /**
-   * SKILL
-   */
-
-  .skill .container { align-items: flex-start; }
-
+  .hero .btn {
+    margin-inline: 0;
+  }
 }
 
 /**
@@ -387,11 +451,11 @@
  */
 
 @media (min-width: 1200px) {
-
   /**
    * ABOUT
    */
 
-  .about-list { gap: 40px; }
-
+  .about-list {
+    gap: 40px;
+  }
 }
