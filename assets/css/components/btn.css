@@ -19,9 +19,11 @@
   transition: var(--transition-1);
 }
 
-.btn:is(:hover, :focus-visible) {
-  background-color: var(--hover-bg, var(--jet));
-  box-shadow: 5px 5px 0 -2px var(--hover-shadow-color, var(--orange-red));
+@media (hover: hover) {
+  .btn:is(:hover, :focus-visible) {
+    background-color: var(--hover-bg, var(--jet));
+    box-shadow: 5px 5px 0 -2px var(--hover-shadow-color, var(--orange-red));
+  }
 }
 
 .btn-primary,
@@ -42,4 +44,6 @@
   --hover-shadow-color: var(--maximum-yellow-red);
 }
 
-.btn-tertiary:is(:hover, :focus-visible) { color: var(--white); }
+@media (hover: hover) {
+  .btn-tertiary:is(:hover, :focus-visible) { color: var(--white); }
+}
