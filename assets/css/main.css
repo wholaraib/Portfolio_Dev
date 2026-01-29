@@ -53,6 +53,7 @@
   position: relative;
   background-color: var(--maximum-yellow-red_a10);
   padding-block-start: calc(var(--section-padding) + 60px);
+  padding-block-end: var(--section-padding);
   text-align: center;
   overflow: hidden;
 }
@@ -72,7 +73,7 @@
 
 .hero .container {
   display: grid;
-  gap: 70px;
+  gap: 40px;
 }
 
 .hero-subtitle {
@@ -92,8 +93,15 @@
 }
 
 .hero-banner {
-  max-width: max-content;
+  max-width: 100%;
+  width: 100%;
   margin-inline: auto;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .philosophy-section {
@@ -379,6 +387,14 @@
 
 @media (min-width: 575px) {
   /**
+   * HERO
+   */
+  
+  .hero .container {
+    gap: 60px;
+  }
+
+  /**
    * ABOUT & SKILL
    */
 
@@ -405,6 +421,10 @@
   /**
    * HERO
    */
+
+  .hero .container {
+    gap: 70px;
+  }
 
   .hero-text {
     --fs-18: 2rem;
