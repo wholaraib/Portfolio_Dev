@@ -330,11 +330,47 @@
   padding: 24px;
 }
 
-.heatmap h3 {
-  text-align: center;
+.heatmap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
+  gap: 12px;
+}
+
+.heatmap h3 {
+  text-align: left;
+  margin: 0;
   font-size: 20px;
   font-weight: 600;
+  flex: 1;
+}
+
+.visit-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background-color: transparent;
+  color: var(--orange-red);
+  border: 2px solid var(--orange-red);
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.visit-link:hover {
+  background-color: var(--orange-red);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 106, 26, 0.3);
+}
+
+.visit-link ion-icon {
+  font-size: 16px;
 }
 
 .heatmap img {
