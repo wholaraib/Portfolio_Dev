@@ -128,8 +128,13 @@ textarea {
   color: var(--white);
   word-break: break-all;
 }
+.btn-hover{
+  transition: color 0.3s ease;
+}
 
-
+.btn-hover:hover {
+  color: var(--orange-red);
+}
 
 
 /*-----------------------------------*\
