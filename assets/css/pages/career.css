@@ -1,0 +1,314 @@
+/*-----------------------------------*\
+  #service.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2022 codewithsadee
+ */
+ 
+/**
+ * TABLE OF CONTENT
+ *
+ * COMPONENTS
+ * Card...........................Cards style
+ * Btn............................Button style
+ *
+ * MAIN CONTENT
+ * Service........................Service style
+ * Media queries..................Responsive for all devices
+ */
+
+
+
+
+
+/*-----------------------------------*\
+  #COMPONENTS
+\*-----------------------------------*/
+
+@import url('../components/card.css');
+@import url('../components/btn.css');
+
+
+
+
+/*-----------------------------------*\
+  #HEADER
+\*-----------------------------------*/
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: #fff9ef;
+}
+
+.logo-text {
+  font-family: "Inter", "Montserrat", system-ui, sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #2f2f2f;
+  line-height: 1;
+}
+
+
+
+
+
+/*-----------------------------------*\
+  #EXPERIENCE
+\*-----------------------------------*/
+
+.experience { 
+  padding-block-start: calc(var(--section-padding) + 60px);
+  background-color: var(--maximum-yellow-red_a10);
+}
+
+.experience-timeline {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  padding: 60px 0;
+}
+
+/* Timeline line */
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, hsl(177, 39%, 72%), hsl(41, 99%, 64%), hsl(19, 82%, 57%));
+  top: 0;
+}
+
+.timeline-item {
+  margin-bottom: 80px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline Marker */
+.timeline-marker {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 6px var(--white), 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+  margin: 0 20px;
+}
+
+.timeline-marker:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 0 6px var(--white), 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.marker-number {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+}
+
+/* Timeline Content */
+.timeline-content {
+  width: calc(50% - 50px);
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  order: -1;
+}
+
+/* Experience Card */
+.experience-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 5px solid;
+}
+
+.experience-card:hover {
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.experience-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--jet);
+  margin: 0;
+}
+
+.experience-duration {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.experience-company {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--orange-red);
+  margin: 10px 0;
+}
+
+.experience-description {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+.experience-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+
+.experience-highlights li {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.65);
+  padding: 6px 0 6px 20px;
+  position: relative;
+}
+
+.experience-highlights li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--orange-red);
+  font-weight: 700;
+}
+
+.experience-highlights a {
+  color: var(--orange-red);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.experience-highlights a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--orange-red);
+  transition: width 0.3s ease;
+}
+
+.experience-highlights a:hover {
+  background-color: rgba(255, 106, 26, 0.1);
+}
+
+.experience-highlights a:hover::after {
+  width: 100%;
+}
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+@media (max-width: 992px) {
+  .experience-timeline {
+    padding: 40px 0;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  .timeline-item:nth-child(even) .timeline-content {
+    order: 0;
+  }
+
+  .timeline-marker {
+    margin: 20px 0;
+    order: 1;
+  }
+
+  .timeline-content {
+    width: 100%;
+    order: 2;
+  }
+
+  .experience-timeline::before {
+    left: 40px;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: 0;
+    top: -40px;
+    margin: 0;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .experience-card {
+    padding: 24px;
+    margin-left: 100px;
+  }
+
+  .experience-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-timeline::before {
+    left: 30px;
+  }
+
+  .timeline-marker {
+    width: 60px;
+    height: 60px;
+    left: 0;
+  }
+
+  .marker-number {
+    font-size: 18px;
+  }
+
+  .experience-card {
+    margin-left: 80px;
+  }
+}
